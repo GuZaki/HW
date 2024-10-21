@@ -15,6 +15,7 @@ function getNewNumber(num1, num2, num3) {
 
 // 4. Сделайте функцию, которая принимает параметром число от 1 до 7, а возвращает день недели на русском языке.
 function getDayOfWeek(num) {
+  // 1 вариант
   switch (num) {
     case 1:
       return "Понедельник";
@@ -33,8 +34,20 @@ function getDayOfWeek(num) {
     default:
       return "Нет такого дня недели";
   }
+
+  // 2 вариант
+  const arrayOfWeekDays = [
+    "Понедельник",
+    "Вторник",
+    "Среда",
+    "Четверг",
+    "Пятница",
+    "Суббота",
+    "Воскресенье",
+  ];
+  return arrayOfWeekDays.filter((day, index) => index === num - 1).toString();
 }
-// console.log(getDayOfWeek(6))
+console.log(getDayOfWeek(6));
 
 // 5. Сделайте функцию, которая параметрами принимает 2 числа.
 // Если эти числа равны - пусть функция вернет true, а если не равны - false.
@@ -143,14 +156,14 @@ function getDivisors(num) {
 
 // 15. Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять сложите его цифры. И так, пока сумма не станет однозначным числом (9 и менее).
 function getSum(num) {
-  // 1 вариант
   let result = getDigitsSum(num);
   for (let i = 0; i < result; i++) {
     result = result < 9 ? result : getDigitsSum(result);
   }
+
   return result;
 }
-// console.log(getSum(55551222969999955));
+// console.log(getSum(55552));
 
 // 16. Напишите стрелочную функцию, которая будет возвращать true если строка является палиндромом и false в противном случае.
 const isStringPalindrom = (string) => {
@@ -159,4 +172,4 @@ const isStringPalindrom = (string) => {
       string.toLowerCase().replaceAll(" ", "")
     );
 }
-console.log(isStringPalindrom("А роза упала на лапу Азора"));
+// console.log(isStringPalindrom("А роза упала на лапу Азора"));
