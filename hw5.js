@@ -109,7 +109,7 @@ const getSubstr = (str, char, pos) => {
     ? str.slice(0, str.indexOf(char))
     : str.slice(str.indexOf(char)+1);
 }
-console.log(getSubstr("hopopoellopooop", 'e', 2)); 
+//console.log(getSubstr("hopopoellopooop", 'e', 2)); 
 
 // 17. Напишите функцию insert(str, substr, pos), которая вставляет подстроку substr в указанную позицию pos строки str. По умолчанию подстрока вставляется в начало строки.
 const insert = (str, substr, pos = 0) => {
@@ -142,3 +142,21 @@ const cutString = (str, n) => str.split(' ').slice(0, n).join(' ');
 // 22. Напишите функцию findWord(word, str), которая проверяет, существует ли в строке str слова word.
 const findWord = (word, str) =>  str.includes(word);
 //console.log(findWord("lo", "hello"));
+
+const arr1 = [2, 8, 5, 2, 8]
+const arr2 = [2, 8, 5, 2, 8];
+// const newArr = arr.reduce((acc, item) => (item % 2 === 0 && item > 0) ? acc + item : acc, 0)
+// console.log(newArr)
+
+function fff(arg1, arg2) {
+  if(arg1.length !== arg2.length) return false
+  let result = true
+  for(let num in arg1){
+    if(arg1[num] !== arg2[num]){
+      result = false
+    }
+  }
+  return result
+}
+
+console.log(fff(arr1, arr2));
