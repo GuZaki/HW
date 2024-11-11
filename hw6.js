@@ -93,3 +93,33 @@ const getTotalMoreThan = array => {
 // сделает массив ['x', 'x', 'x', 'x', 'x'].
 const arrayFill = (value, quantity) => Array(quantity).fill(value);
 // console.log(arrayFill('x', 5));
+
+const city1 = {
+    name: 'Moscow',
+    population: 13149803,
+    getCityName(){
+        return this.name
+    },
+    getPopulation(){
+        return this.population
+    }
+}
+
+const city2 = {
+  name: "Minsk",
+  population: 2000000,
+
+};
+
+// console.log(call.getCityName())
+// console.log(city.getPopulation());
+
+function n() {
+    const a = 10;
+    return function g(b){
+        return a * b;
+    }
+}
+
+
+console.log(n(10));
